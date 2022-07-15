@@ -172,7 +172,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="git命令总结"><a href="#git命令总结" class="headerlink" title="git命令总结"></a>git命令总结</h2><h4 id="创造"><a href="#创造" class="headerlink" title="创造"></a>创造</h4><h5 id="克隆现有存储库"><a href="#克隆现有存储库" class="headerlink" title="克隆现有存储库"></a>克隆现有存储库</h5><p>$ git clone ssh:&#x2F;&#x2F;<a href="mailto:&#117;&#x73;&#101;&#114;&#x40;&#x64;&#111;&#x6d;&#97;&#x69;&#110;&#46;&#99;&#x6f;&#109;">&#117;&#x73;&#101;&#114;&#x40;&#x64;&#111;&#x6d;&#97;&#x69;&#110;&#46;&#99;&#x6f;&#109;</a>&#x2F;repo.git</p>
+<h5 id="创建一个新的本地存储库"><a href="#创建一个新的本地存储库" class="headerlink" title="创建一个新的本地存储库"></a>创建一个新的本地存储库</h5><p>$ git init</p>
+<h5 id="当地变化"><a href="#当地变化" class="headerlink" title="当地变化"></a>当地变化</h5><p>Changed files in your working directory</p>
+<p>$ git status</p>
+<p>Changes to tracked files</p>
+<p>$ git diff</p>
+<h5 id="将所有当前更改添加到下一个提交"><a href="#将所有当前更改添加到下一个提交" class="headerlink" title="将所有当前更改添加到下一个提交"></a>将所有当前更改添加到下一个提交</h5><p>$ git add .</p>
+<h5 id="在中添加一些更改到下一次提交"><a href="#在中添加一些更改到下一次提交" class="headerlink" title="在中添加一些更改到下一次提交"></a>在中添加一些更改到下一次提交</h5><p>$ git add -p</p>
+<h5 id="提交跟踪文件中的所有本地更改"><a href="#提交跟踪文件中的所有本地更改" class="headerlink" title="提交跟踪文件中的所有本地更改"></a>提交跟踪文件中的所有本地更改</h5><p>$ git commit -a</p>
+<h5 id="提交先前进行的更改"><a href="#提交先前进行的更改" class="headerlink" title="提交先前进行的更改"></a>提交先前进行的更改</h5><p>$ git commit</p>
+<h5 id="更改最后一次提交"><a href="#更改最后一次提交" class="headerlink" title="更改最后一次提交"></a>更改最后一次提交</h5><h5 id="不要修改已发布的提交！"><a href="#不要修改已发布的提交！" class="headerlink" title="不要修改已发布的提交！"></a>不要修改已发布的提交！</h5><p>$ git commit –amend</p>
+<h5 id="提交历史"><a href="#提交历史" class="headerlink" title="提交历史"></a>提交历史</h5><h5 id="显示所有提交，从最新开始"><a href="#显示所有提交，从最新开始" class="headerlink" title="显示所有提交，从最新开始"></a>显示所有提交，从最新开始</h5><p>$ git log</p>
+<h5 id="显示特定文件随时间的变化e"><a href="#显示特定文件随时间的变化e" class="headerlink" title="显示特定文件随时间的变化e"></a>显示特定文件随时间的变化e</h5><p>$ git log -p</p>
+<h5 id="谁更改了中的内容和时间"><a href="#谁更改了中的内容和时间" class="headerlink" title="谁更改了中的内容和时间"></a>谁更改了中的内容和时间</h5><p>$ git blame</p>
+<h5 id="分支机构和标签"><a href="#分支机构和标签" class="headerlink" title="分支机构和标签"></a>分支机构和标签</h5><p>列出所有现有分支</p>
+<p>$ git branch -av</p>
+<p>切换HEAD分支</p>
+<p>$ git checkout</p>
+<h5 id="根据您当前的HEAD创建一个新分支"><a href="#根据您当前的HEAD创建一个新分支" class="headerlink" title="根据您当前的HEAD创建一个新分支"></a>根据您当前的HEAD创建一个新分支</h5><p>$ git branch</p>
+<h5 id="基于远程分支创建一个新的跟踪分支"><a href="#基于远程分支创建一个新的跟踪分支" class="headerlink" title="基于远程分支创建一个新的跟踪分支"></a>基于远程分支创建一个新的跟踪分支</h5><p>$ git checkout –track</p>
+<h5 id="删除本地分支"><a href="#删除本地分支" class="headerlink" title="删除本地分支"></a>删除本地分支</h5><p>$ git branch -d</p>
+<h5 id="用标签标记当前提交"><a href="#用标签标记当前提交" class="headerlink" title="用标签标记当前提交"></a>用标签标记当前提交</h5><p>$ git tag</p>
+<h5 id="更新和发布"><a href="#更新和发布" class="headerlink" title="更新和发布"></a>更新和发布</h5><h5 id="列出所有当前配置的遥控器"><a href="#列出所有当前配置的遥控器" class="headerlink" title="列出所有当前配置的遥控器"></a>列出所有当前配置的遥控器</h5><p>$ git remote -v</p>
+<h5 id="显示有关遥控器的信息"><a href="#显示有关遥控器的信息" class="headerlink" title="显示有关遥控器的信息"></a>显示有关遥控器的信息</h5><p>$ git remote show</p>
+<h5 id="添加名为的新远程存储库"><a href="#添加名为的新远程存储库" class="headerlink" title="添加名为的新远程存储库"></a>添加名为的新远程存储库</h5><p>$ git remote add</p>
+<p>从下载所有更改，但不要集成到HEAD中</p>
+<p>$ git fetch</p>
+<p>下载更改并直接合并&#x2F;集成到HEAD中</p>
+<p>$ git pull</p>
+<p>在远程上发布本地更改</p>
+<p>$ git push</p>
+<p>删除遥控器上的分支</p>
+<p>$ git branch -dr</p>
+<p>发布标签</p>
+<p>$ git push –tags</p>
+<p>合并与基础<br>将合并到当前HEAD中</p>
+<p>$ git merge</p>
+<p>将当前的HEAD重新设置到</p>
+<p>不要重新发布已发布的提交！</p>
+<p>$ git rebase</p>
+<p>中止基准</p>
+<p>$ git rebase –abort</p>
+<p>解决冲突后继续进行基准</p>
+<p>$ git rebase –continue</p>
+<p>使用您配置的合并工具解决冲突</p>
+<p>$ git mergetool</p>
+<p>使用编辑器手动解决冲突，并（在解决之后）将文件标记为已解决</p>
+<p>$ git add</p>
+<p>$ git rm</p>
+<p>撤消<br>丢弃工作目录中的所有本地更改</p>
+<p>$ git reset –hard HEAD</p>
+<p>放弃特定文件中的本地更改</p>
+<p>$ git checkout HEAD</p>
+<p>还原提交（通过产生具有相反更改的新提交）</p>
+<p>$ git revert</p>
+<p>将HEAD指针重置为上一次提交</p>
+<p>…并丢弃此后的所有更改</p>
+<p>$ git reset –hard</p>
+<p>…并将所有更改保留为未分阶段的更改</p>
+<p>$ git reset</p>
+<p>…并保留未提交的本地更改</p>
+<p>$ git reset –keep</p>
+
       
 
       
